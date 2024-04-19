@@ -1,0 +1,17 @@
+*,
+body::before,
+body::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family-primary;
+  background-color: $background-color-primary;
+  color: $color-secondary;
+}
+body {
+  max-width: 960px;
+  margin: auto;
+}
+button {
+  @include button-base;
+}

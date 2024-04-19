@@ -1,0 +1,16 @@
+@mixin button-base {
+  padding: $padding-primary;
+  background-color: $button-background-color-primary;
+  color: $button-color-primary;
+  box-shadow: 5px 5px 5px $box-shadow-color-primary;
+  border-radius: $border-radius-primary;
+}
+
+@mixin button-secondary {
+  font-size: $font-size-tertiary;
+  margin: $margin-primary;
+  padding: $padding-primary;
+  background-color: $button-background-color-primary;
+  color: $button-color-primary;
+  border-radius: $border-radius-primary;
+}

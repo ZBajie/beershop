@@ -1,0 +1,12 @@
+@import "../../style/style.scss";
+
+.header-main {
+  margin: $margin-secondary;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  div {
+    text-align: center;
+  }
+}
