@@ -7,9 +7,9 @@ const Header = () => {
       <Link to="/">🍺</Link>
       <div>
         <h1>Beers for tears</h1>
-        <p>Find your favorite beer</p>
+        <p>Buy your favorite beer</p>
       </div>
-      <p>🍺</p>
+      <Link to="/order">🍺</Link>
     </header>
   )
 }
