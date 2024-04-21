@@ -1,0 +1,40 @@
+@import "../../style/style.scss";
+
+.beers {
+  article {
+    width: 200px;
+    margin: $margin-secondary;
+    background-color: $background-color-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px $box-shadow-color-secondary;
+    border-radius: $border-radius-primary;
+    &:hover {
+      box-shadow: 15px 15px 15px $box-shadow-color-secondary;
+    }
+    h3 {
+      padding: $padding-primary;
+    }
+    div {
+      p {
+        background-color: transparent;
+      }
+      display: flex;
+      div {
+        padding: $padding-primary;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    img {
+      max-height: 200px;
+      padding: $padding-primary;
+      margin-left: $padding-primary;
+    }
+    button {
+      margin-top: auto;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Mariestads Export",
+    "alcohol": 5.3,
+    "volume": 330,
+    "price": 15,
+    "image": "https://product-cdn.systembolaget.se/productimages/186120/186120_400.png?q=75&w=1024"
+  },
+  {
+    "id": 2,
+    "name": "Leffe Blonde",
+    "alcohol": 6.6,
+    "volume": 330,
+    "price": 24,
+    "image": "https://product-cdn.systembolaget.se/productimages/7481/7481_800.png"
+  },
+  {
+    "id": 3,
+    "name": "Carlsberg Export",
+    "alcohol": 5.0,
+    "volume": 330,
+    "price": 14,
+    "image": "https://product-cdn.systembolaget.se/productimages/53090/53090_400.png?q=75&w=1024"
+  }
+]
