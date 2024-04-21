@@ -1,0 +1,33 @@
+@import "../../style/style.scss";
+
+.cart {
+  width: 500px;
+  margin: $margin-secondary;
+  background-color: $background-color-secondary;
+  .cart-footer,
+  .cart-body {
+    margin: $margin-primary;
+    padding: $padding-primary;
+    display: flex;
+    flex-direction: row;
+    div {
+      padding: $padding-primary;
+      box-shadow: 5px 5px 5px $background-color-primary;
+      &:hover {
+        box-shadow: 15px 15px 15px $background-color-primary;
+      }
+    }
+    div:first-child {
+      margin-right: auto;
+    }
+    div:last-child {
+      margin-left: 1rem;
+    }
+    div:nth-child(5) {
+      margin-left: $margin-primary;
+    }
+  }
+  button {
+    @include button-base;
+  }
+}
