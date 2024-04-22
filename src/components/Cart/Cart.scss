@@ -10,24 +10,39 @@
     padding: $padding-primary;
     display: flex;
     flex-direction: row;
-    div {
-      padding: $padding-primary;
-      box-shadow: 5px 5px 5px $background-color-primary;
-      &:hover {
-        box-shadow: 15px 15px 15px $background-color-primary;
-      }
+    align-items: center;
+
+    padding: $padding-primary;
+    box-shadow: 5px 5px 5px $background-color-primary;
+    &:hover {
+      box-shadow: 15px 15px 15px $background-color-primary;
     }
+
     div:first-child {
       margin-right: auto;
     }
-    div:last-child {
-      margin-left: 1rem;
+    div:nth-child(3) {
+      margin-left: $margin-primary;
+      margin-right: $margin-primary;
     }
     div:nth-child(5) {
       margin-left: $margin-primary;
+      margin-right: $margin-primary;
+    }
+    div:nth-child(7) {
+      margin-left: $margin-secondary;
     }
   }
   button {
     @include button-base;
+  }
+  .cart-empty {
+    padding: $padding-primary;
+    text-align: center;
+    box-shadow: 5px 5px 5px $background-color-primary;
+  }
+  .cart-footer {
+    display: flex;
+    justify-content: flex-end;
   }
 }

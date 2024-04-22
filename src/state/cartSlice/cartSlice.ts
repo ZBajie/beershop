@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
+import Cart from "../../components/Cart/Cart"
 
 type Cart = {
   id: number
@@ -31,9 +32,34 @@ const cartSlice = createSlice({
       }
       state.sum += price
     },
+    incrementQuantity: (state, action: { payload: number }) => {
+      const id = action.payload
+      const item = state.cart.find((item) => item.id === id)
+      if (item) {
+        item.quantity++
+        state.sum += item.price
+      }
+    },
+    decrementQuantity: (state, action: { payload: number }) => {
+      const id = action.payload
+      const item = state.cart.find((item) => item.id === id)
+      if (item && item.quantity > 1) {
+        item.quantity--
+        state.sum -= item.price
+      }
+    },
+    removeItem: (state, action: { payload: number }) => {
+      const id = action.payload
+      const item = state.cart.find((item) => item.id === id)
+      if (item) {
+        state.sum -= item.price * item.quantity
+        state.cart.splice(state.cart.indexOf(item), 1)
+      }
+    },
   },
 })
 
-export const { addToCart } = cartSlice.actions
+export const { addToCart, incrementQuantity, decrementQuantity, removeItem } =
+  cartSlice.actions
 
 export default cartSlice.reducer

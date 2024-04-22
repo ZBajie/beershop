@@ -1,24 +1,54 @@
-import { useSelector } from "react-redux"
-import { RootState } from "../../state/store"
+import { useDispatch, useSelector } from "react-redux"
+import { AppDispatch, RootState } from "../../state/store"
 import "./Cart.scss"
+import {
+  incrementQuantity,
+  decrementQuantity,
+  removeItem,
+} from "../../state/cartSlice/cartSlice"
 
 const Cart = () => {
   const cart = useSelector((state: RootState) => state.cart)
+  const dispatch = useDispatch<AppDispatch>()
   return (
     <div className="cart">
-      {cart.cart.map((beer) => (
-        <div className="cart-body" key={beer.id}>
-          <div>{beer.name}</div>
-          <button>-</button>
-          <div>{beer.quantity} pcs</div>
-          <button>+</button>
-          <div>{beer.price} $/pcs</div>
-          <div>{beer.price * beer.quantity} $</div>
+      {cart.cart && cart.cart.length ? (
+        cart.cart.map((beer) => (
+          <div className="cart-body" key={beer.id}>
+            <div>{beer.name}</div>
+            <button
+              onClick={() => {
+                dispatch(decrementQuantity(beer.id))
+              }}
+            >
+              -
+            </button>
+            <div>{beer.quantity} pcs</div>
+            <button
+              onClick={() => {
+                dispatch(incrementQuantity(beer.id))
+              }}
+            >
+              +
+            </button>
+            <div>{beer.price} $/pcs</div>
+            <button
+              onClick={() => {
+                dispatch(removeItem(beer.id))
+              }}
+            >
+              Remove
+            </button>
+            <div>{beer.price * beer.quantity} $</div>
+          </div>
+        ))
+      ) : (
+        <div className="cart-empty">
+          <p>Cart is empty</p>
         </div>
-      ))}
+      )}
       <div className="cart-footer">
-        <div>Total:</div>
-        <div>{cart.sum} $</div>
+        <p>Total: {cart.sum} $</p>
       </div>
     </div>
   )
