@@ -1,9 +1,17 @@
 @import "../../style/style.scss";
 
-.footer.main {
+.footer-main {
   padding: $padding-secondary;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    button {
+      margin: $margin-primary;
+    }
+  }
 }
