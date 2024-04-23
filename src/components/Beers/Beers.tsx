@@ -23,7 +23,7 @@ const Beers = () => {
               <p>{beer.volume} ml</p>
               <p>{beer.price} skr</p>
               <button
-                onClick={() =>
+                onClick={() => {
                   dispatch(
                     addToCart({
                       id: beer.id,
@@ -32,7 +32,7 @@ const Beers = () => {
                       quantity: 1,
                     })
                   )
-                }
+                }}
               >
                 Add to cart
               </button>
