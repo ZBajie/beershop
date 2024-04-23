@@ -17,4 +17,14 @@
   .beer {
     height: 50px;
   }
+  a {
+    &:hover {
+      cursor: pointer;
+      box-shadow: 5px 5px 5px $box-shadow-color-secondary;
+    }
+    &:active {
+      box-shadow: 15px 15px 15px $box-shadow-color-secondary;
+      transform: translateX(-5px);
+    }
+  }
 }

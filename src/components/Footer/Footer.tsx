@@ -9,6 +9,7 @@ const Footer = () => {
 
   return (
     <footer className={` footer-main `}>
+      <p>If you still on your feets, you can read here.</p>
       <div>
         <p>Whats your alcohol percentage?</p>
         <button onClick={() => dispatch(decrement())}>-</button>
@@ -21,7 +22,6 @@ const Footer = () => {
           +
         </button>
       </div>
-      <p>If you still on your feets, you can read here.</p>
     </footer>
   )
 }
