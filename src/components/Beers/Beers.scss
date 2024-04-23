@@ -35,6 +35,10 @@
       padding: $padding-primary;
       margin-left: $padding-primary;
     }
+    .selected-beer {
+      transform: scale(1.3) rotate(10deg);
+      transition: 2s;
+    }
 
     button {
       margin-top: auto;

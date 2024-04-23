@@ -1,7 +1,7 @@
 import "./Beers.scss"
 import { useDispatch, useSelector } from "react-redux"
 import { AppDispatch, RootState } from "../../state/store"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { addToCart } from "../../state/cartSlice/cartSlice"
 
 const Beers = () => {
@@ -11,6 +11,8 @@ const Beers = () => {
   useEffect(() => {
     console.log(cart)
   }, [cart])
+
+  const [selectedBeer, setSelectedBeer] = useState<number | null>(null)
 
   return (
     <section className="beers">
@@ -32,12 +34,20 @@ const Beers = () => {
                       quantity: 1,
                     })
                   )
+                  setSelectedBeer(beer.id)
+                  setTimeout(() => {
+                    setSelectedBeer(null)
+                  }, 2000)
                 }}
               >
                 Add to cart
               </button>
             </div>
-            <img src={beer.image} alt={beer.name} />
+            <img
+              className={selectedBeer === beer.id ? "selected-beer" : ""}
+              src={beer.image}
+              alt={beer.name}
+            />
           </div>
         </article>
       ))}

@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className={` footer-main `}>
       <p>If you still on your feets, you can read here.</p>
       <div>
-        <p>Whats your alcohol percentage?</p>
+        <p>Whats your alcohol level?</p>
         <button onClick={() => dispatch(decrement())}>-</button>
         <p>{styleValue}</p>
         <button
