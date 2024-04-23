@@ -23,7 +23,7 @@ const Beers = () => {
             <div>
               <p>{beer.alcohol} % vol.</p>
               <p>{beer.volume} ml</p>
-              <p>{beer.price} skr</p>
+              <p>{beer.price} $</p>
               <button
                 onClick={() => {
                   dispatch(
