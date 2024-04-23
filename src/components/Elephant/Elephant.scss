@@ -1,0 +1,45 @@
+@import "../../style/style.scss";
+
+.flying-elephant {
+  height: 100px;
+  animation: flying-elephant 5s infinite;
+}
+
+@keyframes flying-elephant {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  5% {
+    transform: translate(0px, -200px);
+  }
+  10% {
+    transform: translate(-100px, -500px);
+  }
+  20% {
+    transform: translate(-200px, -700px);
+  }
+  30% {
+    transform: translate(-300px, -900px);
+  }
+  40% {
+    transform: translate(-200px, -1000px);
+  }
+  50% {
+    transform: translate(400px, -1100px);
+  }
+  60% {
+    transform: translate(-100px, -200px);
+  }
+  70% {
+    transform: translate(-500px, -800px);
+  }
+  80% {
+    transform: translate(200px, -100px);
+  }
+  90% {
+    transform: translate(500px, -600px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

@@ -13,7 +13,7 @@ const styleSlice = createSlice({
   initialState,
   reducers: {
     increment: (state) => {
-      if (state.styleValue < 2) {
+      if (state.styleValue < 3) {
         state.styleValue++
       }
     },
