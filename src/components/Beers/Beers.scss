@@ -1,6 +1,10 @@
 @import "../../style/style.scss";
 
 .beers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   article {
     width: 200px;
     margin: $margin-secondary;

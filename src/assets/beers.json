@@ -22,5 +22,53 @@
     "volume": 330,
     "price": 14,
     "image": "https://product-cdn.systembolaget.se/productimages/53090/53090_400.png?q=75&w=1024"
+  },
+  {
+    "id": 4,
+    "name": "Nääs APA",
+    "alcohol": 5.8,
+    "volume": 330,
+    "price": 27,
+    "image": "https://product-cdn.systembolaget.se/productimages/1048541/1048541_400.png?q=75&w=1024"
+  },
+  {
+    "id": 5,
+    "name": "Norrlands Guld",
+    "alcohol": 5.3,
+    "volume": 330,
+    "price": 14,
+    "image": "https://product-cdn.systembolaget.se/productimages/310574/310574_400.png?q=75&w=1024"
+  },
+  {
+    "id": 6,
+    "name": "Sierra Nevada",
+    "alcohol": 9.6,
+    "volume": 330,
+    "price": 43,
+    "image": "https://product-cdn.systembolaget.se/productimages/42832888/42832888_400.png?q=75&w=1024"
+  },
+  {
+    "id": 7,
+    "name": "Badgers Ales",
+    "alcohol": 4.4,
+    "volume": 330,
+    "price": 34,
+    "image": "https://product-cdn.systembolaget.se/productimages/42060660/42060660_400.png?q=75&w=1024"
+  },
+  {
+    "id": 8,
+    "name": "Nils Oscar",
+    "alcohol": 5.8,
+    "volume": 330,
+    "price": 23,
+    "image": "https://product-cdn.systembolaget.se/productimages/865609/865609_400.png?q=75&w=1024"
+  },
+  {
+    "id": 9,
+    "name": "Fuller's",
+    "alcohol": 5.3,
+    "volume": 330,
+    "price": 33,
+    "image": "https://product-cdn.systembolaget.se/productimages/1129104/1129104_400.png?q=75&w=1024"
   }
 ]
