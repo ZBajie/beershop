@@ -1,6 +1,8 @@
 @import "../../style/style.scss";
 
 .header-main {
+  font-size: $font-size-secondary;
+  font-weight: 900;
   margin: $margin-secondary;
   display: flex;
   flex-direction: row;

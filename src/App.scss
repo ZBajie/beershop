@@ -1,0 +1,82 @@
+@import "./style/style.scss";
+
+.happy {
+  background-color: rgb(142, 241, 241);
+  background-image: url("./assets/pexels-mccutcheon-1191710.jpg");
+  color: rgb(170, 19, 107);
+  text-shadow: 5px 5px 5px pink;
+  transition: all 1s;
+
+  button {
+    background-color: pink;
+    color: #000;
+  }
+  .beers {
+    article {
+      background-color: chartreuse;
+    }
+  }
+  .cart {
+    background-color: chartreuse;
+  }
+  .footer-main {
+    color: rgb(69, 6, 129);
+  }
+}
+.drunk {
+  transition: all 1s;
+
+  button {
+    animation: button-move 3s infinite;
+  }
+  .beers {
+    article {
+      animation: move 3s infinite;
+    }
+  }
+  .cart {
+    animation: move 3s infinite;
+  }
+  .header-main {
+    img {
+      animation: button-move 3s infinite;
+    }
+    div {
+      animation: move 3s infinite;
+    }
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(0px) translateY(10px);
+  }
+  50% {
+    transform: translateX(20px) translateY(20px);
+  }
+  75% {
+    transform: translateX(10px) translateY(10px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+@keyframes button-move {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(0px) translateY(-10px);
+  }
+  50% {
+    transform: translateX(-20px) translateY(-20px);
+  }
+  75% {
+    transform: translateX(-10px) translateY(-10px);
+  }
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}

@@ -11,6 +11,7 @@
     align-items: center;
     box-shadow: 5px 5px 5px $box-shadow-color-secondary;
     border-radius: $border-radius-primary;
+    transition: all 1s;
     &:hover {
       box-shadow: 15px 15px 15px $box-shadow-color-secondary;
     }
@@ -18,9 +19,6 @@
       padding: $padding-primary;
     }
     div {
-      p {
-        background-color: transparent;
-      }
       display: flex;
       div {
         padding: $padding-primary;

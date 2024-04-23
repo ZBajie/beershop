@@ -8,7 +8,7 @@ const Footer = () => {
   const dispatch = useDispatch()
 
   return (
-    <footer className={` footer-main ${styleValue === 1 && "happy"}`}>
+    <footer className={` footer-main `}>
       <div>
         <p>Whats your alcohol percentage?</p>
         <button onClick={() => dispatch(decrement())}>-</button>

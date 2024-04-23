@@ -4,7 +4,7 @@
   color: $button-color-primary;
   box-shadow: 5px 5px 5px $box-shadow-color-primary;
   border-radius: $border-radius-primary;
-  transition: background-color 1s;
+  transition: all 1s;
   &:hover {
     cursor: pointer;
     box-shadow: 15px 15px 15px $background-color-primary;

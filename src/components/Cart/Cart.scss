@@ -4,6 +4,8 @@
   width: 500px;
   margin: $margin-secondary;
   background-color: $background-color-secondary;
+  transition: all 1s;
+
   .cart-footer,
   .cart-body {
     margin: $margin-primary;
@@ -14,6 +16,8 @@
 
     padding: $padding-primary;
     box-shadow: 5px 5px 5px $background-color-primary;
+    transition: all 1s;
+
     &:hover {
       box-shadow: 15px 15px 15px $background-color-primary;
     }
@@ -33,9 +37,7 @@
       margin-left: $margin-secondary;
     }
   }
-  button {
-    @include button-base;
-  }
+
   .cart-empty {
     padding: $padding-primary;
     text-align: center;
