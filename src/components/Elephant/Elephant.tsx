@@ -2,7 +2,10 @@ import "./Elephant.scss"
 import elephantSvg from "../../assets/elephant-svgrepo-com.svg"
 
 const Elephant = () => {
-  return <img src={elephantSvg} alt="" className="flying-elephant" />
+  return (
+    <a href="/pokemons">
+      <img src={elephantSvg} alt="" className="flying-elephant" />
+    </a>
+  )
 }
-
 export default Elephant
