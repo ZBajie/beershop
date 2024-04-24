@@ -6,6 +6,7 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage"
 import Order from "./pages/Order/Order"
 import { useSelector } from "react-redux"
 import { RootState } from "./state/store"
+import Pokemons from "./components/Pokemons/Pokemons"
 
 function App() {
   const styleValue = useSelector((state: RootState) => state.style.styleValue)
@@ -21,6 +22,10 @@ function App() {
         {
           path: "/order",
           element: <Order />,
+        },
+        {
+          path: "/pokemons",
+          element: <Pokemons />,
         },
       ],
     },

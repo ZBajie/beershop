@@ -8,14 +8,20 @@ import { useSelector } from "react-redux"
 
 const Layout = () => {
   const styleValue = useSelector((state: RootState) => state.style.styleValue)
+
+  const PokemonPage = window.location.pathname === "/pokemons"
+
+  const renderHeader = !PokemonPage && <Header />
+  const renderElephant = !PokemonPage && styleValue > 2 && <Elephant />
+  const renderFooter = !PokemonPage && <Footer />
   return (
     <div className="layout">
-      <Header />
+      {renderHeader}
       <main>
         <Outlet />
       </main>
-      {styleValue > 2 && <Elephant />}
-      <Footer />
+      {renderElephant}
+      {renderFooter}
     </div>
   )
 }
