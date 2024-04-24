@@ -1,9 +1,16 @@
+// Colors
+$color-secondary: rgb(255, 255, 255);
+$color-tertiary: red;
+
 // Background colors
 $background-color-primary: gray;
 $background-color-secondary: darkgray;
+$background-color-tertiary: yellow;
 
 // Buton colors
 $button-background-color-primary: darkgray;
+$button-background-color-secondary: gray;
+$button-background-color-tertiary: red;
 
 $button-background-color-active: gray;
 
@@ -15,9 +22,6 @@ $box-shadow-color-secondary: darkgray;
 // Disabled colors
 $disabled-color-primary: gray;
 
-// Colors
-$color-secondary: rgb(255, 255, 255);
-
 $color-error: red;
-
-// Happy
+// Border
+$border-color-primary: red;

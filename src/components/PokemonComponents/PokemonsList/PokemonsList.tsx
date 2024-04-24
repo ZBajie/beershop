@@ -1,3 +1,5 @@
+import "./PokemonsList.scss"
+
 import { z } from "zod"
 import { useFetch } from "../../../hooks/useFetch"
 import { useState } from "react"
@@ -30,33 +32,33 @@ const PokemonsList = () => {
       {validatedData.success && (
         <ul>
           {validatedData.data.results.map((pokemon) => (
-            <li key={pokemon.name}>
-              <a href={pokemon.url}>{pokemon.name}</a>
-            </li>
+            <li key={pokemon.name}>{pokemon.name}</li>
           ))}
         </ul>
       )}
-      <button
-        onClick={() => {
-          if (validatedData.success) {
-            setUrl(
-              validatedData.data.previous ||
-                "https://pokeapi.co/api/v2/pokemon/"
-            )
-          }
-        }}
-      >
-        Prev
-      </button>
-      <button
-        onClick={() => {
-          if (validatedData.success) {
-            setUrl(validatedData.data.next || url)
-          }
-        }}
-      >
-        Next
-      </button>
+      <div className="buttons-div">
+        <button
+          onClick={() => {
+            if (validatedData.success) {
+              setUrl(
+                validatedData.data.previous ||
+                  "https://pokeapi.co/api/v2/pokemon/"
+              )
+            }
+          }}
+        >
+          Prev
+        </button>
+        <button
+          onClick={() => {
+            if (validatedData.success) {
+              setUrl(validatedData.data.next || url)
+            }
+          }}
+        >
+          Next
+        </button>
+      </div>
     </section>
   )
 }

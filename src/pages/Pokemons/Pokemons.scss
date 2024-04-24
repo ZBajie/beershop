@@ -1,11 +1,11 @@
 @import "../../style/style.scss";
 
 .pokemons {
-  background-color: yellow;
-  color: red;
+  min-height: 100vh;
+  background-color: $background-color-tertiary;
+  color: $color-tertiary;
   padding: $padding-secondary;
   h1 {
-    color: red;
     font-size: $font-size-secondary;
     font-weight: 900;
     padding: $padding-secondary;

@@ -1,0 +1,32 @@
+@import "../../../style/style.scss";
+
+.pokemon-list {
+  width: fit-content;
+  padding: $padding-secondary;
+  border: 5px dotted $border-color-primary;
+  border-radius: $border-radius-primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    text-align: center;
+    margin-bottom: $margin-secondary;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: $font-size-tertiary;
+    li {
+      padding: $padding-primary;
+    }
+  }
+  .buttons-div {
+    margin-top: $margin-secondary;
+    button {
+      margin: $margin-primary;
+      background-color: $button-background-color-tertiary;
+    }
+  }
+}
