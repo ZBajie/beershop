@@ -1,0 +1,16 @@
+@import "../../style/style.scss";
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    text-align: center;
+    padding: $padding-secondary;
+  }
+  p {
+    text-align: center;
+    padding: $padding-secondary;
+  }
+}
