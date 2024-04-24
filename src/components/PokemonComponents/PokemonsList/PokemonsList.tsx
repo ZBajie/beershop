@@ -4,6 +4,7 @@ import { z } from "zod"
 import { useFetch } from "../../../hooks/useFetch"
 import { useState } from "react"
 
+// Pokemons list schema and type
 const ResultSchema = z.object({
   name: z.string(),
   url: z.string(),
@@ -16,10 +17,17 @@ const PokemonsSchema = z.object({
 })
 
 type PokemonsType = z.infer<typeof PokemonsSchema>
+
+// pokemon card shema and type
+
 const PokemonsList = () => {
+  // Pokemons list
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon/")
   const { data, loading, error } = useFetch<PokemonsType>(url)
   const validatedData = PokemonsSchema.safeParse(data)
+
+  // Pokemon card
+  const [pokemonUrl, setPokemonUrl] = useState("")
   return (
     <section className="pokemon-list">
       <h2>Pokemons</h2>
@@ -32,7 +40,9 @@ const PokemonsList = () => {
       {validatedData.success && (
         <ul>
           {validatedData.data.results.map((pokemon) => (
-            <li key={pokemon.name}>{pokemon.name}</li>
+            <li key={pokemon.name} onClick={() => setPokemonUrl(pokemon.url)}>
+              {pokemon.name}
+            </li>
           ))}
         </ul>
       )}
@@ -59,6 +69,7 @@ const PokemonsList = () => {
           Next
         </button>
       </div>
+      <p>{pokemonUrl}</p>
     </section>
   )
 }

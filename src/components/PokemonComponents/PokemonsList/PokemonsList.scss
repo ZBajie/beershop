@@ -8,6 +8,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 5px 5px 5px $box-shadow-color-secondary;
+  transition: all 1s;
+  &:hover {
+    box-shadow: 15px 15px 15px $box-shadow-color-secondary;
+  }
 
   h2 {
     text-align: center;
@@ -20,6 +25,10 @@
     font-size: $font-size-tertiary;
     li {
       padding: $padding-primary;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 5px 5px 5px $box-shadow-color-secondary;
+      }
     }
   }
   .buttons-div {

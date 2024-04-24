@@ -1,0 +1,19 @@
+@import "../../../style/style.scss";
+
+.pokemon-card {
+  margin: $margin-secondary;
+  padding: $padding-secondary;
+  border: 5px dotted $border-color-primary;
+  border-radius: $border-radius-primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 5px 5px $box-shadow-color-secondary;
+  transition: all 1s;
+  &:hover {
+    box-shadow: 15px 15px 15px $box-shadow-color-secondary;
+  }
+  img {
+    height: 200px;
+  }
+}

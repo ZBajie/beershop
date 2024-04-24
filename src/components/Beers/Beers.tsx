@@ -6,11 +6,7 @@ import { addToCart } from "../../state/cartSlice/cartSlice"
 
 const Beers = () => {
   const beers = useSelector((state: RootState) => state.beers)
-  const cart = useSelector((state: RootState) => state.cart)
   const dispatch = useDispatch<AppDispatch>()
-  useEffect(() => {
-    console.log(cart)
-  }, [cart])
 
   const [selectedBeer, setSelectedBeer] = useState<number | null>(null)
 
