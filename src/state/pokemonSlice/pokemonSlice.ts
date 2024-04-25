@@ -7,21 +7,27 @@ type PokemonType = {
   pokemonImageUrl: string
 }
 
-const initialState: PokemonType[] = [
-  {
-    pokemonDataUrl: "https://pokeapi.co/api/v2/pokemon/6/",
-    pokemonName: "charizard",
-    pokemonId: 6,
-    pokemonImageUrl:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
-  },
-]
+const initialState: PokemonType = {
+  pokemonDataUrl: "https://pokeapi.co/api/v2/pokemon/6/",
+  pokemonName: "charizard",
+  pokemonId: 6,
+  pokemonImageUrl:
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+}
+
 const pokemonSlice = createSlice({
   name: "pokemon",
   initialState,
-  reducers: {},
+  reducers: {
+    updatePokemonUrl: (state, action) => {
+      return {
+        ...state,
+        pokemonDataUrl: action.payload.pokemonDataUrl,
+      }
+    },
+  },
 })
 
-export const { reducer: pokemonReducer } = pokemonSlice
+export const { updatePokemonUrl } = pokemonSlice.actions
 
 export default pokemonSlice.reducer

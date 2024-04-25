@@ -1,7 +1,7 @@
 import "./Beers.scss"
 import { useDispatch, useSelector } from "react-redux"
 import { AppDispatch, RootState } from "../../state/store"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { addToCart } from "../../state/cartSlice/cartSlice"
 
 const Beers = () => {

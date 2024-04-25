@@ -3,6 +3,9 @@ import "./PokemonsList.scss"
 import { z } from "zod"
 import { useFetch } from "../../../hooks/useFetch"
 import { useState } from "react"
+import { AppDispatch } from "../../../state/store"
+import { useDispatch } from "react-redux"
+import { updatePokemonUrl } from "../../../state/pokemonSlice/pokemonSlice"
 
 // Pokemons list schema and type
 const ResultSchema = z.object({
@@ -18,8 +21,6 @@ const PokemonsSchema = z.object({
 
 type PokemonsType = z.infer<typeof PokemonsSchema>
 
-// pokemon card shema and type
-
 const PokemonsList = () => {
   // Pokemons list
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon/")
@@ -28,6 +29,7 @@ const PokemonsList = () => {
 
   // Pokemon card
   const [pokemonUrl, setPokemonUrl] = useState("")
+  const dispatch = useDispatch<AppDispatch>()
   return (
     <section className="pokemon-list">
       <h2>Pokemons</h2>
@@ -40,7 +42,17 @@ const PokemonsList = () => {
       {validatedData.success && (
         <ul>
           {validatedData.data.results.map((pokemon) => (
-            <li key={pokemon.name} onClick={() => setPokemonUrl(pokemon.url)}>
+            <li
+              key={pokemon.name}
+              onClick={() => {
+                setPokemonUrl(pokemon.url)
+                dispatch(
+                  updatePokemonUrl({
+                    pokemonDataUrl: pokemon.url,
+                  })
+                )
+              }}
+            >
               {pokemon.name}
             </li>
           ))}
@@ -69,7 +81,6 @@ const PokemonsList = () => {
           Next
         </button>
       </div>
-      <p>{pokemonUrl}</p>
     </section>
   )
 }

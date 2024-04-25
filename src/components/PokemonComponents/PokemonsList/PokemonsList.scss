@@ -2,6 +2,7 @@
 
 .pokemon-list {
   width: fit-content;
+  margin: $margin-secondary;
   padding: $padding-secondary;
   border: 5px dotted $border-color-primary;
   border-radius: $border-radius-primary;
