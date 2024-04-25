@@ -28,7 +28,6 @@ const PokemonsList = () => {
   const validatedData = PokemonsSchema.safeParse(data)
 
   // Pokemon card
-  const [pokemonUrl, setPokemonUrl] = useState("")
   const dispatch = useDispatch<AppDispatch>()
   return (
     <section className="pokemon-list">
@@ -45,7 +44,6 @@ const PokemonsList = () => {
             <li
               key={pokemon.name}
               onClick={() => {
-                setPokemonUrl(pokemon.url)
                 dispatch(
                   updatePokemonUrl({
                     pokemonDataUrl: pokemon.url,
