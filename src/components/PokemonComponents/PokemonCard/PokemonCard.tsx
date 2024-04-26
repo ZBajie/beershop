@@ -18,30 +18,49 @@ const PokemonCard = () => {
       {error && <p>{error.toString()}</p>}
 
       {!validatedData.success && (
-        <p>Validation Error: {validatedData.error.toString()}</p>
+        <p>Validation Error: {/*validatedData.error.toString()*/}</p>
       )}
 
-      <h2>{validatedData.data && validatedData.data.name}</h2>
+      <h2>{validatedData.success && validatedData.data.name}</h2>
       <div>
         <img
-          src={validatedData.data && validatedData.data.sprites.front_default}
-          alt=""
-        />
-        <img
-          src={validatedData.data && validatedData.data.sprites.back_default}
-          alt=""
-        />
-        <img
           src={
-            validatedData.data &&
-            validatedData.data.sprites.other.dream_world.front_default
+            validatedData.success &&
+            typeof validatedData.data.sprites.front_default === "string"
+              ? validatedData.data.sprites.front_default
+              : ""
           }
           alt=""
         />
         <img
           src={
-            data?.sprites.versions["generation-v"]["black-white"].animated
-              .front_default
+            validatedData.success &&
+            typeof validatedData.data.sprites.back_default === "string"
+              ? validatedData.data.sprites.back_default
+              : ""
+          }
+          alt=""
+        />
+        <img
+          src={
+            validatedData.success &&
+            typeof validatedData.data.sprites.other.dream_world
+              .front_default === "string"
+              ? validatedData.data.sprites.other.dream_world.front_default
+              : ""
+          }
+          alt=""
+        />
+        <img
+          src={
+            validatedData.success &&
+            typeof validatedData.data.sprites.versions["generation-v"][
+              "black-white"
+            ].animated.front_default === "string"
+              ? validatedData.data.sprites.versions["generation-v"][
+                  "black-white"
+                ].animated.front_default
+              : ""
           }
           alt=""
         />
